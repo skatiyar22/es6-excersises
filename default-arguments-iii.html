@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Default Arguments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+    /* 
+       Write a function that executes a callback function after a given delay in milliseconds. The default value of delay is one second.
+    */
+
+    let callMeAfterSomeTime = (fnCallBack, timeInSecond = 1000) =>  setTimeout (fnCallBack,timeInSecond);
+    const showMessage = () => {alert('I got called')};
+    callMeAfterSomeTime(showMessage,2000);
+    //callMeAfterSomeTime(showMessage);
+
+    </script>
+</body>
+</html>

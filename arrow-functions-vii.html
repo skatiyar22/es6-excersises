@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Arrow Functions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+    /* 
+       Write an arrow function which takes array of integers, and returns the sum of the elements of the array. Use JS reduce method in solution
+    */
+    const numbers = [2,55,11,88,32,87,32,77];
+    const sum = (arr) => arr.reduce((total,value)=>total + value,0);
+    console.log(sum(numbers));
+    </script>
+</body>
+</html>

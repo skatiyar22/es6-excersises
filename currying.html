@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Currying</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+    /* 
+       Create a function than when executed as follows
+
+        greetings('Mike')('Wish you Happy Birthday!')('Steve');
+
+        will print in below format (Should maintain line breaks)
+        Dear Mike,
+        Wish you Happy Birthday!
+        From,
+        Steve
+
+    */
+ 
+
+    let greetings = p1 => p2 => p3 => `Dear ${p1},\n${p2}\nFrom,\n${p3}`;
+
+    console.log(greetings('Mike')('Wish you Happy Birthday!')('Steve'));
+
+    </script>
+</body>
+</html>

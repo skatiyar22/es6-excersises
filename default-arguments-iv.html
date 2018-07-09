@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Default Arguments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+    /* 
+       Change the below code such that the second argument of printComment has a default value that’s initially 1, and is incremented by 1 after each call.
+            
+        function printComment( comment , line ) {
+            console. log( line, comment ) ;
+        }
+
+    */
+ 
+
+    function printComment (comment, line = 1){
+        return function(comment,lineNo){
+            if(lineNo){
+                line = lineNo;
+                console.log(lineNo,comment);
+            }else{
+                
+                console.log(++line,comment);
+            }
+            
+        }
+    }
+    let myMessage = printComment('Hello Friends');
+    myMessage('Call Me',2);
+    myMessage('New Message');
+    myMessage('called Again',6);
+    myMessage('Another Message Received');
+
+    </script>
+</body>
+</html>
